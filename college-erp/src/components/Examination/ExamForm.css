@@ -1,0 +1,84 @@
+/* src/components/Examination/ExamForm.css */
+
+.exam-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.exam-form h2 {
+  margin-bottom: 20px;
+}
+
+.exam-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.exam-form label {
+  margin-bottom: 10px;
+}
+
+.exam-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff; /* Bootstrap primary blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover state */
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004080; /* Even darker blue for active state */
+  transform: translateY(0);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+.registered-subjects {
+  max-height: 200px; /* Adjust this value to control the height */
+  overflow-y: auto;
+}
+
+.registered-subjects table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.registered-subjects th, .registered-subjects td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.registered-subjects th {
+  background-color: #f2f2f2;
+}

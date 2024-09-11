@@ -1,0 +1,28 @@
+/* src/components/Footer/Footer.css */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* background: #d3e8ff; Semi-transparent background for the glass effect */
+    backdrop-filter: blur(50px); /* Blur effect for the frosted glass look */
+    padding: 0;
+    text-align: center;
+    z-index: 1000; /* Ensures the footer stays above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a lifted look */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a subtle top border for definition */
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
+}
+
+/* Additional styles to ensure text inside the footer is centered and styled properly */
+.footer p {
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Adjust text color for better visibility */
+    font-size: 14px; /* Adjust font size as needed */
+}

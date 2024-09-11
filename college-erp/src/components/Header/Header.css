@@ -1,0 +1,47 @@
+/* src/components/Header/Header.css */
+
+.header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .logo {
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .app-bar-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .app-bar-actions button {
+    padding: 8px 16px;
+    background-color: white;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .app-bar-actions button:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .app-bar-actions button:active {
+    background-color: #004080;
+    transform: translateY(0);
+  }
+  

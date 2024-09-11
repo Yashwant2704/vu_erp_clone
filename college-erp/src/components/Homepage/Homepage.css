@@ -1,0 +1,331 @@
+/* Homepage.css */
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+}
+
+.homepage h1 {
+  padding-bottom: 50px;
+}
+
+h1 {
+  padding-bottom: 50px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 30px -10px #0000001a;
+  max-width: 50px;
+  min-width: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all .4s ease;
+  margin: 10px; /* Adjusted margin for better spacing */
+  text-decoration: none; /* Ensure links look like cards */
+  color: inherit; /* Inherit text color */
+}
+
+.card:before {
+  height: 120px;
+  width: calc(100% + 100px);
+  content: "";
+  position: absolute;
+  background-image: radial-gradient(circle, rgb(254, 235, 243) 0%, rgb(148, 187, 233) 100%);
+  border-radius: 4px 4px 100% 100%;
+  transition: all .4s ease-out;
+  top: 0;
+}
+
+.card .card-content {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card .card-content h2 {
+  color: #000;
+  margin: 0;
+  padding: 20px 20px 0;
+  font-weight: 500;
+  height: 69px;
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card .card-content .logo-container {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 0 0 #3d37374d;
+  transition: all .6s ease;
+  border: 1px solid #777;
+}
+
+.card .card-content .logo-container img {
+  margin-top: 10px;
+  width: 70%;
+}
+
+.card .actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  z-index: 1;
+}
+
+.card .actions .btn {
+  border: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+  width: calc(50% - 1px);
+  height: 36px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all .6s ease-in-out;
+  cursor: pointer;
+  color: #4481eb;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: .5px;
+  background: rgba(68, 129, 235, .08);
+}
+
+.card .actions .btn span {
+  z-index: 1;
+  opacity: 1;
+  transition: all .4s ease-in-out;
+}
+
+.card .actions .btn .icon {
+  width: 10px;
+  opacity: 0;
+  position: absolute;
+  transition: all .2s ease-in-out;
+}
+
+.card .actions .btn:before {
+  content: "";
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background: #4481eb;
+  transition: all .4s ease;
+  bottom: 0;
+  opacity: .2;
+}
+
+.card .actions .btn:focus {
+  outline: 0;
+}
+
+.card .actions .btn:hover {
+  background-color: #064df180;
+}
+
+.card .actions .btn:hover span {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.card .actions .btn:hover .icon {
+  width: 22px;
+  opacity: 1;
+  transition: all .4s ease-in-out;
+}
+
+.card .actions .btn:hover:nth-child(3) .icon {
+  width: 18px;
+}
+
+.card .actions .btn:hover:before {
+  height: 100%;
+}
+
+.card .actions .btn.clicked span {
+  display: none;
+}
+
+.card .actions .btn.clicked .icon {
+  width: 22px;
+  opacity: 1;
+  animation: icon .5s ease forwards;
+}
+
+@keyframes icon {
+  0% {
+    width: 22px;
+  }
+  50% {
+    width: 40px;
+  }
+  to {
+    width: 22px;
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 10px -5px #0000004d;
+}
+
+.card:hover:before {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.card:hover .card-content {
+  color: #fff;
+}
+
+.card:hover .logo-container {
+  box-shadow: 0 0 0 8px #5965c0;
+}
+
+.card:hover .logo-container img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+/* Additional styles for closed card */
+.card.closed {
+  min-width: 120px;
+  max-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .6s ease;
+  cursor: pointer;
+}
+
+.card.closed .card-content, .card.closed .actions {
+  display: none;
+}
+
+.card.closed h2 {
+  padding: 0;
+  height: 100%;
+  transform: rotate(-90deg);
+  width: 440px;
+  z-index: 2;
+  transition: all .6s ease;
+}
+
+.card.closed .logo-container {
+  border-radius: 100%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: -20px;
+  margin: 0;
+  z-index: 1;
+  box-shadow: 0 20px 30px -10px #0000004d;
+  transition: all .6s ease;
+  background-color: #fff;
+  border: 5px solid #fff;
+}
+
+.card.closed .logo-container img {
+  margin-top: 50%;
+  width: 100%;
+  transition: all .6s ease;
+}
+
+.card.closed:hover .logo-container img {
+  transform: scale(1.1);
+  transition: all .6s ease;
+}
+
+.card.closed:hover .logo-container {
+  box-shadow: 0 0 0 8px #cde9ff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .card {
+    max-width: 160px; /* Adjusted max-width for tablets */
+    min-width: 160px; /* Adjusted min-width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 140px; /* Adjusted max-width for mobile screens */
+    min-width: 140px; /* Adjusted min-width for mobile screens */
+  }
+
+  .homepage h1 {
+    font-size: 1.5em; /* Reduced font size for smaller screens */
+  }
+
+  .card-container {
+    padding: 0 10px; /* Add horizontal padding */
+  }
+
+  .card {
+    margin: 5px; /* Adjusted margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage h1 {
+    font-size: 1.2em; /* Further reduced font size for very small screens */
+  }
+
+  .card {
+    max-width: 130px; /* Further adjusted max-width for very small screens */
+    min-width: 130px; /* Further adjusted min-width for very small screens */
+  }
+
+  .card-container {
+    padding: 0 5px; /* Add horizontal padding for very small screens */
+  }
+
+  .card {
+    margin: 5px; /* Adjusted margin for very small screens */
+  }
+}
+
+@media (max-width: 376px) {
+  .homepage h1 {
+    font-size: 1.2em; /* Further reduced font size for very small screens */
+  }
+
+  .card {
+    max-width: 130px; /* Further adjusted max-width for very small screens */
+    min-width: 130px; /* Further adjusted min-width for very small screens */
+  }
+
+  .card-container {
+    padding: 0 5px; /* Add horizontal padding for very small screens */
+  }
+
+  .card {
+    margin: 5px; /* Adjusted margin for very small screens */
+  }
+}

@@ -1,0 +1,114 @@
+/* src/components/Login.css */
+
+.login-container {
+  /* background-color: rgba(255, 255, 255, 0.7); Adjust the alpha value as needed for transparency */
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Logo container to hold the logo image */
+.login-logo-container {
+  text-align: center;
+  margin-bottom: 20px; /* Space between logo and login container */
+}
+
+/* Styling for the logo image */
+.login-logo {
+  max-width: 80px; /* Adjust the size as needed */
+  height: auto;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff; /* Optional: Change border color on focus */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+p a {
+  color: #d3e8ff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.MuiSnackbar-root {
+  z-index: 2000; /* Ensure the Snackbar appears above other components */
+}
+
+.splash-screen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the splash screen is above the login form */
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}

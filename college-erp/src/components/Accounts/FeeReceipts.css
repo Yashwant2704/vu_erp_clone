@@ -1,0 +1,63 @@
+.fee-receipts {
+  text-align: center;
+  padding: 20px;
+}
+
+.fee-receipts h2 {
+  padding-bottom: 20px;
+}
+
+.receipt-grid {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.scrollable-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between receipt items */
+  padding: 10px; /* Padding for container */
+}
+
+.receipt-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.receipt-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.receipt-item h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.receipt-item .receipt-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.logout-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #df362c;
+}

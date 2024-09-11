@@ -1,0 +1,95 @@
+.hall-ticket-content {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.hall-ticket-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px; /* Less margin to bring the footer closer to the table */
+}
+
+.hall-ticket-content th,
+.hall-ticket-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.hall-ticket-content thead {
+  background-color: #f2f2f2;
+}
+
+.signature,
+.stamp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items to the sides */
+  margin-top: 10px; /* Ensure some margin at the top for space */
+}
+
+.signature p,
+.stamp p {
+  margin: 0 10px 0 0; /* Adjust spacing around paragraphs */
+}
+
+.signature-image,
+.stamp-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* Print-specific styles */
+@media print {
+  @page {
+    margin: 0; /* Remove default margins */
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hall-ticket-content {
+    margin: 20mm;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    background: none; /* Disable background graphics */
+  }
+
+  /* Ensure the table fits within the printable area */
+  table {
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Additional styles for printing purposes */
+  .signature,
+  .stamp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the sides in print */
+    margin-top: 20px; /* Space for print */
+  }
+
+  .signature p,
+  .stamp p {
+    margin: 0 10px 0 0; /* Adjust spacing around paragraphs */
+  }
+
+  .signature-image,
+  .stamp-image {
+    width: 120px; /* Adjust size for print */
+    height: auto;
+  }
+
+  /* Disable background graphics for all elements */
+  * {
+    background: none !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Maintenance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ERP Maintenance Dashboard</h1>
+
+        <!-- Add Student Form -->
+        <section>
+            <h2>Add Student</h2>
+            <form id="add-student-form">
+                <label for="student-id">Student ID:</label>
+                <input type="number" id="student-id" name="studentId" required>
+
+                <label for="student-name">Name:</label>
+                <input type="text" id="student-name" name="name" required>
+
+                <label for="student-prn">PRN:</label>
+                <input type="text" id="student-prn" name="prn" required>
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <!-- Search Student Form -->
+        <section>
+            <h2>Search Student</h2>
+            <form id="search-student-form">
+                <label for="search-student-id">Student ID:</label>
+                <input type="number" id="search-student-id" name="studentId" required>
+                
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-result"></div>
+        </section>
+
+        <!-- Delete Student Form -->
+        <section>
+            <h2>Delete Student</h2>
+            <form id="delete-student-form">
+                <label for="delete-student-id">Student ID:</label>
+                <input type="number" id="delete-student-id" name="studentId" required>
+
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+
+        <!-- Pay Fees Form -->
+        <section>
+            <h2>Pay Fees</h2>
+            <form id="pay-fees-form">
+                <label for="fee-student-id">Student ID:</label>
+                <input type="number" id="fee-student-id" name="studentId" required>
+
+                <label for="fee-amount">Amount:</label>
+                <input type="number" step="0.01" id="fee-amount" name="amount" required>
+
+                <button type="submit">Pay Fees</button>
+            </form>
+        </section>
+
+        <!-- Request Document Form -->
+        <section>
+            <h2>Request Document</h2>
+            <form id="request-document-form">
+                <label for="doc-student-id">Student ID:</label>
+                <input type="number" id="doc-student-id" name="studentId" required>
+
+                <label for="document-type">Document Type:</label>
+                <input type="text" id="document-type" name="documentType" required>
+
+                <button type="submit">Request Document</button>
+            </form>
+        </section>
+
+        <!-- Exam Form Submission -->
+        <section>
+            <h2>Submit Exam Form</h2>
+            <form id="exam-form">
+                <label for="exam-student-id">Student ID:</label>
+                <input type="number" id="exam-student-id" name="studentId" required>
+
+                <label for="exam-name">Exam Name:</label>
+                <input type="text" id="exam-name" name="examName" required>
+
+                <button type="submit">Submit Exam Form</button>
+            </form>
+        </section>
+
+        <!-- Submit Hall Ticket Form -->
+        <section>
+            <h2>Submit Hall Ticket Details</h2>
+            <form id="hall-ticket-form">
+                <label for="hall-ticket-student-id">Student ID:</label>
+                <input type="number" id="hall-ticket-student-id" name="studentId" required>
+
+                <label for="hall-ticket-exam-name">Exam Name:</label>
+                <input type="text" id="hall-ticket-exam-name" name="examName" required>
+
+                <label for="hall-ticket-exam-date">Exam Date:</label>
+                <input type="date" id="hall-ticket-exam-date" name="examDate" required>
+
+                <label for="hall-ticket-venue">Venue:</label>
+                <input type="text" id="hall-ticket-venue" name="venue" required>
+
+                <button type="submit">Submit Hall Ticket</button>
+            </form>
+        </section>
+
+        <!-- Fetch Hall Ticket Details -->
+        <section>
+            <h2>Fetch Hall Ticket Details</h2>
+            <form id="fetch-hall-ticket-form">
+                <label for="fetch-hall-ticket-student-id">Student ID:</label>
+                <input type="number" id="fetch-hall-ticket-student-id" name="studentId" required>
+
+                <button type="submit">Fetch</button>
+            </form>
+            <div id="hall-ticket-details"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

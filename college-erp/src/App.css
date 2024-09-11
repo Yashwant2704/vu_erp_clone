@@ -1,0 +1,102 @@
+/* src/App.css */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  background-image: url("/src/assets/pexels-jplenio-1103970.jpg"); /* Update the path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center; /* Align content horizontally in the center */
+  align-items: center; /* Align content vertically in the center */
+  height: 100vh; /* Ensure full viewport height */
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2 {
+  color: #000000;
+}
+
+button {
+  background-color: #4A90E2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 110px; /* Adjust as needed to prevent overlap with the Navbar */
+  margin-bottom: 40px; /* Adjust as needed to prevent overlap with the Footer */
+}
+
+/* Specific styles for fee receipts */
+.fee-receipts {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fee-receipts h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.receipt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  gap: 20px; /* Adjust the gap between receipt items */
+}
+
+.receipt-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+}
+
+@media print {
+  .receipt-item {
+    border: none; /* Remove borders in print view */
+    padding: 0;
+  }
+}

@@ -1,0 +1,100 @@
+/* SplashScreen.css */
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #CDF6FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out forwards; /* Animation for fading in the content */
+}
+
+.splash-content {
+  text-align: center;
+  color: white;
+}
+
+.splash-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: slideDown 1s ease-in-out;
+}
+
+.splash-subtitle {
+  color: black;
+  font-size: 1.2em;
+  animation: slideUp 1s ease-in-out;
+}
+
+.loading-animation {
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-out {
+  animation: slideUpFadeOut 0.8s ease-in-out forwards;
+}
+
+@keyframes slideUpFadeOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,133 @@
+/* src/components/Breadcrumb/Breadcrumb.css */
+
+.breadcrumb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Blur effect for the frosted glass look */
+    padding: 5px 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px; /* Control the breadcrumb height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Optional: Add a subtle border for definition */
+}
+
+.breadcrumb .logo-img {
+    height: 50px; /* Adjust height to be more responsive */
+    width: auto; /* Auto width to maintain aspect ratio */
+    border-radius: 0; /* Ensure no rounded corners */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and links */
+}
+
+.breadcrumb ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between breadcrumb items */
+    flex-grow: 1; /* Allow breadcrumb list to take up remaining space */
+    overflow: hidden; /* Hide overflow for responsiveness */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.breadcrumb ul li {
+    display: inline;
+}
+
+.breadcrumb ul li:not(:first-child)::before {
+    content: '/';
+    margin: 0 5px;
+    color: #888; /* Lighter color for separator */
+}
+
+.breadcrumb ul li span {
+    color: #333;
+}
+
+.breadcrumb ul li a {
+    color: #ffffff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb ul li a:hover {
+    color: #0075f1; /* Darker blue on hover */
+}
+
+.logout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: auto; /* Pushes the button to the far right */
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+  
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 4px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.back-button:hover {
+    background-color: #0056b3;
+}
+  
+.back-button svg {
+    margin-right: 6px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .breadcrumb {
+        height: auto;
+        padding: 10px;
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+    
+    .breadcrumb .logo-img {
+        height: 40px; /* Adjust logo height for smaller screens */
+        margin-bottom: 0; /* Remove space below logo */
+    }
+
+    .breadcrumb ul {
+        flex-direction: row; /* Keep breadcrumbs in a row */
+        flex-wrap: nowrap; /* Prevent wrapping if possible */
+        width: auto; /* Auto width */
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    .breadcrumb ul li {
+        margin-bottom: 0;
+    }
+
+    .breadcrumb ul li:not(:first-child)::before {
+        content: '/'; /* Separator for links after the first child */
+        margin: 0 5px;
+        color: #888; /* Lighter color for separator */
+    }
+    
+    .breadcrumb ul li:first-child::before {
+        content: ''; /* No separator before the first child */
+        margin: 0;
+    }
+}

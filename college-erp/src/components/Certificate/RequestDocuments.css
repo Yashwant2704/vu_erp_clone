@@ -1,0 +1,34 @@
+/* src/components/Certificate/RequestDocuments.css */
+
+.request-documents {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .request-documents h2 {
+    margin-bottom: 20px;
+  }
+  
+  .request-documents form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .request-documents label {
+    margin-bottom: 10px;
+  }
+  
+  .request-documents select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .request-document-snackbar{
+    margin-top: 50px; /* Adjust as needed */
+  }
